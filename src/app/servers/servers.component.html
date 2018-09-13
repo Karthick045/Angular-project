@@ -1,3 +1,23 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer"  >Add Server</button>
-<app-server></app-server>
-<app-server></app-server>
+<!-- <label> Server Name</label> -->
+<!-- <input class="form-control" type="text" (input)="onUpdatedServerName($event)"> -->
+<!-- <input class="form-control" type="text" [(ngModel)]="updatedServerName"> -->
+<!-- {{updatedServerName}} -->
+<!-- <br>
+<button class="btn btn-primary" [disabled]="!allowNewServer" 
+(click)="onCreateServer()">
+    Add Server
+</button>
+<br><br> -->
+<!-- <p [innerText]="allowNewServer"></p> -->
+<!-- <p>{{serverCreationStatus}}</p> -->
+<!-- <p *ngIf="serverCreated"> Server is created, the server name is {{updatedServerName}}</p> 
+<app-server *ngFor= "let server of servers">
+</app-server> -->
+<button class="btn btn-info" (click)="onButtonClick($event)">
+Display Details
+</button>
+<p *ngIf="displayStatus">Password hint : MERA</p>
+<div *ngFor= "let click of buttonClickArray; let i=index" 
+[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+[ngClass]="{fifthlog:i>=4}"
+>{{click}}</div>
